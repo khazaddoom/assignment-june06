@@ -7,18 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  even = false;
-  odd = false;
+  firednumbers: number[] = [];
 
   eventFired(eventData: number) {
     if (eventData % 2 === 0) {
-
-      this.even = true;
-      this.odd = false;
+      this.firednumbers.push(0);
 
     } else {
-      this.even = false;
-      this.odd = true;
+      this.firednumbers.push(1);
     }
   }
 

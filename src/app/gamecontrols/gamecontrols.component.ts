@@ -25,4 +25,8 @@ export class GamecontrolsComponent implements OnInit {
     }, 1000);
 
   }
+
+  onPauseGameclick() {
+    clearInterval(this.interval);
+  }
 }

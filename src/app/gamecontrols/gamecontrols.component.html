@@ -1,8 +1,11 @@
 <div class="row">
   <div class="col-xs-6">
-    <button class="btn btn-outline-success" (click) = "onStartGameclick()">Start Game</button>
+    <button class="btn btn-outline-success" (click) = "onStartGameclick()">
+      <span *ngIf = "numberTicker > 1; else elseBlock">Resume Game</span>
+      <ng-template #elseBlock>Start Game</ng-template>
+    </button>
   </div>
   <div class="col-xs-6">
-      <button class="btn btn-outline-danger">End Game</button>
+      <button class="btn btn-outline-danger" (click) = "onPauseGameclick()">Pause Game</button>
   </div>
 </div>

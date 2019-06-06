@@ -8,8 +8,8 @@
     <div class="h3">Game data below.</div>
   </div>
   <hr>
-  <div class="row">
-    <div class="col-xs-12" *ngIf = "odd" ><app-odd></app-odd></div>
-    <div class="col-xs-12" *ngIf = "even"><app-even></app-even></div>
+  <div class="container" *ngFor = "let firedNumber of firednumbers">
+      <div *ngIf="firedNumber === 0; else elseBlock"><app-even></app-even></div>
+      <ng-template #elseBlock><app-odd></app-odd></ng-template>
   </div>
 </div>
