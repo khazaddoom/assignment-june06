@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'assignment-june06';
+
+  even = false;
+  odd = false;
+
+  eventFired(eventData: number) {
+    if (eventData % 2 === 0) {
+
+      this.even = true;
+      this.odd = false;
+
+    } else {
+      this.even = false;
+      this.odd = true;
+    }
+  }
+
 }
